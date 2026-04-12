@@ -1,0 +1,210 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="3euq7vDRYtog1uwp9pX5">
+    <mxGraphModel dx="1374" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-27" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Como funciona?" vertex="1">
+          <mxGeometry height="320" width="400" x="40" y="600" as="geometry">
+            <mxRectangle height="30" width="130" x="50" y="800" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-25" parent="xv-Wq7fzhFBMuE0bBwwN-27" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: left;&quot;&gt;La estructura de la pila, se basa en dos cosas:&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- char pila[TAM] que es un array de bytes. Es la memoria real donde se guardan los datos, y ahi es donde van uno detras del otro.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- size_t tope que es tratado como indice, te dice en que posicion empieza el ultimo elemento guardado.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Ahora, la idea de la pila, es que solamente se maneja el ultimo elemento agregado. Por lo tanto, no se recorre. Por eso tope es tan importante: porque te dice donde leer.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Otro dato importante, es que en una pila se puede poner cualquier tipo de dato, seguido de cualquier otra cosa. Por lo tanto, podrias poner alguna estructura alumno, seguido de un int comun y silvestre, despues un long, y para terminar agregar cualquier otra estructura. Es por esto, que se debe guardar EL DATO, pero tambien LO QUE OCUPA ese dato. De forma que el programa sepa cuantos bytes tiene que leer..&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="360" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-64" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Funcionamiento grafico paso a paso" vertex="1">
+          <mxGeometry height="520" width="1480" x="40" y="40" as="geometry">
+            <mxRectangle height="30" width="230" x="1470" y="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-1" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="400" width="160" x="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-4" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-5" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="200" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-6" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="200" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-7" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="200" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-8" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="200" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-9" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="200" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-10" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="200" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-11" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="200" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-12" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="200" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-13" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="200" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-19" edge="1" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="130" y="70" as="sourcePoint" />
+            <mxPoint x="190" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-20" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="tope = max" vertex="1">
+          <mxGeometry height="40" width="90" x="50" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-22" edge="1" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="440" as="sourcePoint" />
+            <mxPoint x="190" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-23" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="tope = 0" vertex="1">
+          <mxGeometry height="30" width="60" x="80" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-28" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Primer paso&lt;/h1&gt;&lt;div&gt;Supone que ya tenes la pila inicializada. Ahora, ponele que queres ingresar algo en base a una estructura alumno, que pesa 28 bytes&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="20" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-29" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="400" width="160" x="580" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-30" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="var cargada t_Alumno" vertex="1">
+          <mxGeometry height="50" width="160" x="580" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-31" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="580" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-32" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="580" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-33" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="580" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-34" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="580" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-35" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="580" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-36" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="580" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-37" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="580" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-38" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="580" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-39" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="580" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-40" edge="1" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="xv-Wq7fzhFBMuE0bBwwN-31" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="800" y="110" as="sourcePoint" />
+            <mxPoint x="750" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-41" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="tope = max-sizeof(t_Alumno)" vertex="1">
+          <mxGeometry height="40" width="105" x="795" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-42" edge="1" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="xv-Wq7fzhFBMuE0bBwwN-39" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="790" y="450" as="sourcePoint" />
+            <mxPoint x="760" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-43" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="tope = 0" vertex="1">
+          <mxGeometry height="30" width="60" x="790" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-44" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Segundo paso&lt;/h1&gt;&lt;p&gt;Felicidades, ya cargaste la primer parte del dato, y el indice tope ya se encuentra al final de esos bytes. Pero falta algo importante: el espacio en donde se guarda lo que pesa t_Alumno&lt;/p&gt;" vertex="1">
+          <mxGeometry height="150" width="180" x="400" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-46" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="400" width="160" x="1050" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-47" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="var cargada t_Alumno" vertex="1">
+          <mxGeometry height="50" width="160" x="1050" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-48" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="sizeof(size_t)" vertex="1">
+          <mxGeometry height="30" width="160" x="1050" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-49" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="1050" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-50" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="1050" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-51" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="1050" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-52" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="1050" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-53" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="1050" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-54" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="1050" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-55" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="160" x="1050" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-56" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="160" x="1050" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-57" edge="1" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="xv-Wq7fzhFBMuE0bBwwN-49" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1270" y="110" as="sourcePoint" />
+            <mxPoint x="1220" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-58" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="tope = tope-sizeof(size_t)" vertex="1">
+          <mxGeometry height="50" width="105" x="1265" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-59" edge="1" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="xv-Wq7fzhFBMuE0bBwwN-56" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1260" y="450" as="sourcePoint" />
+            <mxPoint x="1230" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-60" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="tope = 0" vertex="1">
+          <mxGeometry height="30" width="60" x="1260" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-61" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Tercer paso&lt;/h1&gt;&lt;p&gt;Bueno, entonces hay que guardar, en el espacio siguiente en memoria, un espacio para la variable size_t, la cual contendra el tamanio del dato que pusimos antes.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="150" width="180" x="870" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-63" parent="xv-Wq7fzhFBMuE0bBwwN-64" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Finalmente...&lt;/h1&gt;&lt;p&gt;El tope queda actualizado, apuntando (aunque no es un puntero) al espacio para el nuevo elemento que vendra.&amp;nbsp;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="1280" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-66" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="&lt;b&gt;void crearPila (t_pila *pila)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="340" x="480" y="600" as="geometry">
+            <mxRectangle height="30" width="190" x="480" y="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-67" parent="xv-Wq7fzhFBMuE0bBwwN-66" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Basicamente, lo unico que tiene que hacer, es setear el tope de la pila, ya que el usuario le pasa la direccion de la pila ya creada." vertex="1">
+          <mxGeometry height="60" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-68" parent="xv-Wq7fzhFBMuE0bBwwN-66" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;void crearPila(t_pila* pila)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; pila-&amp;gt;tope=TAM_MAX;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="340" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-69" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;void eliminarPila(t_pila* pila)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="200" width="220" x="480" y="780" as="geometry">
+            <mxRectangle height="30" width="190" x="850" y="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-70" parent="xv-Wq7fzhFBMuE0bBwwN-69" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Es exactamente igual a crear la pila. Lo unico que hay que hacer, es setear el tope otra vez en el maximo, arriba de todo. Y despues los nuevos datos iran pisando los viejos." vertex="1">
+          <mxGeometry height="90" width="210" x="5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xv-Wq7fzhFBMuE0bBwwN-71" parent="xv-Wq7fzhFBMuE0bBwwN-69" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;void eliminarPila(t_pila* pila)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; pila-&amp;gt;tope=TAM_MAX;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="220" y="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
