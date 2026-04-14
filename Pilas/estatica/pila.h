@@ -19,7 +19,7 @@ void eliminarPila(t_pila*);
 int ponerEnPila(t_pila*, const void*, size_t); //Apilar
 int sacarDePila(t_pila*, void*, size_t); //Desapilar
 
-int verTope(const t_pila*, void*, size_t);
+int verTopeDePila(const t_pila*, void*, size_t);
 
 int pilaLlena(const t_pila*, size_t);
 int pilaVacia(const t_pila*);
