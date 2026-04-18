@@ -1,0 +1,230 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="3euq7vDRYtog1uwp9pX5">
+    <mxGraphModel dx="2290" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-74" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Nodos" vertex="1">
+          <mxGeometry height="430" width="590" x="900" y="1130" as="geometry">
+            <mxRectangle height="30" width="80" x="1110" y="1710" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-75" parent="AbAJmDd59ydRJxzXMzCG-74" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="En las pilas dinamicas hay una nueva estructura (que sera importante de ahora en adelante), llamada &quot;nodo&quot;. &lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;Un nodo es una estructura que adentro tiene:&lt;/font&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;Un void *info que apunta al dato almacenado.&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;Un size_t tamInfo que indica el tamaño del dato.&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Un puntero a otro nodo que permite encadenar nodos entre sí. O sea, un puntero a la misma estructura, llamado &quot;siguiente&quot;.&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;Esto ultimo es lo mas importante, porque cada nodo conoce al que le sigue (es una estructura recursiva). Esto te deja formar una lista enlazada, que es la base de la pila dinamica.&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;Como nota, al hacer typedef struct hay que primero ponerle un nombre, para que pueda ser llamado dentro (sino es como que estas llamando a snodo, que todavia no existe). Entonces te queda algo como:&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;typedef struct snodo{&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;}t_nodo;&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="390" width="335" x="10.27" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-77" parent="AbAJmDd59ydRJxzXMzCG-74" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-78" parent="AbAJmDd59ydRJxzXMzCG-74" style="rounded=0;whiteSpace=wrap;html=1;" value="struct snodo *siguiente" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-79" parent="AbAJmDd59ydRJxzXMzCG-74" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-80" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Funcionamiento grafico paso a paso" vertex="1">
+          <mxGeometry height="1270" width="780" x="900" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-84" parent="AbAJmDd59ydRJxzXMzCG-80" style="swimlane;whiteSpace=wrap;html=1;" value="Primer paso" vertex="1">
+          <mxGeometry height="190" width="700" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-83" parent="AbAJmDd59ydRJxzXMzCG-84" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Creamos la pila&lt;/h1&gt;&lt;p&gt;Primero se crea una pila. O sea, se inicializa un t_pila.&lt;/p&gt;&lt;p&gt;El puntero recien creado, al no tener todavia ningun nodo en la pila, apuntara a NULL&lt;/p&gt;" vertex="1">
+          <mxGeometry height="160" width="180" x="60" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-86" parent="AbAJmDd59ydRJxzXMzCG-84" style="rounded=0;whiteSpace=wrap;html=1;" value="t_pila *pila = NULL" vertex="1">
+          <mxGeometry height="60" width="120" x="470" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-87" parent="AbAJmDd59ydRJxzXMzCG-80" style="swimlane;whiteSpace=wrap;html=1;" value="Segundo paso" vertex="1">
+          <mxGeometry height="310" width="700" x="30" y="240" as="geometry">
+            <mxRectangle height="30" width="120" x="30" y="250" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-88" parent="AbAJmDd59ydRJxzXMzCG-87" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Apilamos un nodo&lt;/h1&gt;&lt;div&gt;Bueno, la idea principal es que pila apunte a un nodo, no? Vamos a agregarlo.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Pero...a quien apunta &quot;siguiente&quot;, si no hay nada antes? Bueno, pase lo que pase, un nuevo nodo siempre debera apuntar a *pila, porque es aca donde estara la direccion del ultimo nodo creado. En este caso, al ser el primero, siguiente del Nodo 1 apuntara a NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="185" x="50" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-89" parent="AbAJmDd59ydRJxzXMzCG-87" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="210" width="200" x="480" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-90" parent="AbAJmDd59ydRJxzXMzCG-89" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-91" parent="AbAJmDd59ydRJxzXMzCG-89" style="rounded=0;whiteSpace=wrap;html=1;" value="siguiente = *pila" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-92" parent="AbAJmDd59ydRJxzXMzCG-89" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-94" edge="1" parent="AbAJmDd59ydRJxzXMzCG-87" source="AbAJmDd59ydRJxzXMzCG-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="AbAJmDd59ydRJxzXMzCG-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-93" parent="AbAJmDd59ydRJxzXMzCG-87" style="rounded=0;whiteSpace=wrap;html=1;" value="*pila" vertex="1">
+          <mxGeometry height="60" width="120" x="310" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-96" parent="AbAJmDd59ydRJxzXMzCG-80" style="swimlane;whiteSpace=wrap;html=1;" value="Tercer paso" vertex="1">
+          <mxGeometry height="300" width="700" x="30" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-97" parent="AbAJmDd59ydRJxzXMzCG-96" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Apilamos OTRO nodo&lt;/h1&gt;&lt;p&gt;Mismo modo, pero lo hago para mostrar los cambios que hay. Pero tener en cuenta que aca *pila deberia tener la direccion del Nodo 1&lt;/p&gt;" vertex="1">
+          <mxGeometry height="160" width="170" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-98" parent="AbAJmDd59ydRJxzXMzCG-96" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="210" width="200" x="19.99999999999997" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-99" parent="AbAJmDd59ydRJxzXMzCG-98" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-100" parent="AbAJmDd59ydRJxzXMzCG-98" style="rounded=0;whiteSpace=wrap;html=1;" value="siguiente = NULL" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-101" parent="AbAJmDd59ydRJxzXMzCG-98" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-102" parent="AbAJmDd59ydRJxzXMzCG-96" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="210" width="200" x="490" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-103" parent="AbAJmDd59ydRJxzXMzCG-102" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-104" parent="AbAJmDd59ydRJxzXMzCG-102" style="rounded=0;whiteSpace=wrap;html=1;" value="siguiente = *pila" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-105" parent="AbAJmDd59ydRJxzXMzCG-102" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-106" edge="1" parent="AbAJmDd59ydRJxzXMzCG-96" source="AbAJmDd59ydRJxzXMzCG-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="AbAJmDd59ydRJxzXMzCG-102">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="260" />
+              <mxPoint x="470" y="103" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-107" parent="AbAJmDd59ydRJxzXMzCG-96" style="rounded=0;whiteSpace=wrap;html=1;" value="*pila" vertex="1">
+          <mxGeometry height="60" width="120" x="285" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-108" parent="AbAJmDd59ydRJxzXMzCG-80" style="swimlane;whiteSpace=wrap;html=1;" value="Finalmente..." vertex="1">
+          <mxGeometry height="370" width="700" x="30" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-110" parent="AbAJmDd59ydRJxzXMzCG-108" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="210" width="200" x="19.99999999999997" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-111" parent="AbAJmDd59ydRJxzXMzCG-110" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-112" parent="AbAJmDd59ydRJxzXMzCG-110" style="rounded=0;whiteSpace=wrap;html=1;" value="siguiente = NULL" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-113" parent="AbAJmDd59ydRJxzXMzCG-110" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-114" parent="AbAJmDd59ydRJxzXMzCG-108" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="210" width="200" x="250" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-115" parent="AbAJmDd59ydRJxzXMzCG-114" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-116" parent="AbAJmDd59ydRJxzXMzCG-114" style="rounded=0;whiteSpace=wrap;html=1;" value="siguiente = Nodo 1" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-117" parent="AbAJmDd59ydRJxzXMzCG-114" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-120" parent="AbAJmDd59ydRJxzXMzCG-108" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="210" width="200" x="477.5" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-121" parent="AbAJmDd59ydRJxzXMzCG-120" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-122" parent="AbAJmDd59ydRJxzXMzCG-120" style="rounded=0;whiteSpace=wrap;html=1;" value="siguiente = *pila" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-123" parent="AbAJmDd59ydRJxzXMzCG-120" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="25" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-126" edge="1" parent="AbAJmDd59ydRJxzXMzCG-108" source="AbAJmDd59ydRJxzXMzCG-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="AbAJmDd59ydRJxzXMzCG-120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-125" parent="AbAJmDd59ydRJxzXMzCG-108" style="rounded=0;whiteSpace=wrap;html=1;" value="*pila" vertex="1">
+          <mxGeometry height="60" width="120" x="517.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-127" parent="AbAJmDd59ydRJxzXMzCG-108" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Finalmente, queda algo asi...&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="50" width="340" x="50" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-81" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Como funciona?" vertex="1">
+          <mxGeometry height="430" width="350" x="1510" y="1130" as="geometry">
+            <mxRectangle height="30" width="130" x="1730" y="1710" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-82" parent="AbAJmDd59ydRJxzXMzCG-81" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="La pila no guarda todos los elementos directamente, sino que mantiene un puntero al &lt;strong data-start=&quot;1106&quot; data-end=&quot;1114&quot;&gt;tope&lt;/strong&gt;. Por eso tenemos que hacer algo que pueda apuntar a una estructura nodo&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;ͼn&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;ͼt&quot;&gt;t_nodo&amp;nbsp;&lt;/span&gt;&lt;span class=&quot;ͼn&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;ͼt&quot;&gt;t_pila&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;t_pila es un puntero a nodo, y apuntara siempre al que esta al tope de la pila.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Como dato importante, siempre estaremos trabajando con la referencia a pila. O sea, desde la funcion tenemos algo como:&lt;/div&gt;&lt;div&gt;t_pila *pila&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Hay que recordar que pila NO tiene la direccion del nodo, pero *pila SI. Y si te fijas en todas las funciones, nunca se usara solamente &quot;pila&quot;.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="405" width="320" x="15.27" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-128" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="&lt;b&gt;void crearPila (t_pila *pila)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="340" x="2070" y="1590" as="geometry">
+            <mxRectangle height="30" width="190" x="480" y="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-129" parent="AbAJmDd59ydRJxzXMzCG-128" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Lo único que hay que hacer, es inicializar en cero a *pila, para que apunte hacia algun lado." vertex="1">
+          <mxGeometry height="60" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-130" parent="AbAJmDd59ydRJxzXMzCG-128" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;void crearPila(t_pila *pila){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; *pila =NULL;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="340" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-131" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;void eliminarPila(t_pila* pila)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="290" width="340" x="1710" y="1590" as="geometry">
+            <mxRectangle height="30" width="190" x="850" y="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-132" parent="AbAJmDd59ydRJxzXMzCG-131" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Este es un poquito mas largo que la version estatica. Basicamente se trata de ir a la direccion de cada nodo, liberar su contenido, y despues liberar la direccion en si.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Importante! Antes de liberar cualquier cosa, hay que hacer que *pila apunte al siguiente nodo en la lista. Asi borra desde el ultimo, hasta llegar al primero.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="290" x="30" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-133" parent="AbAJmDd59ydRJxzXMzCG-131" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;void eliminarPila(t_pila *pila){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; while(*pila){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; t_nodo *aux = *pila;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; *pila = aux-&amp;gt;sig;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; free(aux-&amp;gt;info);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; free(aux);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="245" x="50" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-134" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="int ponerEnPila (t_pila *pila, void *dato, size_t tamDatos )" vertex="1">
+          <mxGeometry height="580" width="435" x="1710" y="1910" as="geometry">
+            <mxRectangle height="30" width="340" x="1210" y="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-136" parent="AbAJmDd59ydRJxzXMzCG-134" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;int ponerEnPila(t_pila *pila, const void *dato, size_t tamDato){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; t_nodo *nuevo;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; nuevo = (t_nodo*)malloc(sizeof(t_nodo));&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; if(!nuevo)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return SIN_MEM;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; nuevo-&amp;gt;info = malloc(tamDato);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; if(!nuevo-&amp;gt;info){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; free(nuevo);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return SIN_MEM;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; memcpy(nuevo-&amp;gt;info, dato, tamDato);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; nuevo-&amp;gt;tamInfo = tamDato;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; nuevo-&amp;gt;sig = *pila;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; *pila = nuevo;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; return TODO_BIEN;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="415" x="5" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-139" parent="AbAJmDd59ydRJxzXMzCG-134" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Bueno, basicamente, poner un dato es agregar un nodo a la lista. Por esta razon se crea un t_nodo *nuevo. O sea, un puntero a la estructura t_nodo. Y como no se puede usar una primitiva dentro de otra, tenemos que asegurarnos de que haya suficiente memoria para crearlo. Una vez que nos aseguramos de esto, simplemente copiamos el dato que queramos en la informacion del nuevo nodo, le asignamos el peso del dato, y MUY IMPORTANTE LOS DOS SIGUIENTES PUNTOS:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Hacer que su siguiente sea igual a *pila. O sea, con esto estamos haciendo que apunte al ultimo nodo que se creo (o NULL en su defecto, si es el primero).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Despues *pila tiene que apuntar al nuevo t_nodo. Porque sino, perderiamos la direccion del ultimo elemento.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Para resumir, primero el nuevo nodo guarda la direccion de *pila, y despues *pila obtiene la direccion a nuevo.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="410" x="10" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-140" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="int sacarDePila (t_pila *pila, void *dato, size_t tamDatos )" vertex="1">
+          <mxGeometry height="440" width="435" x="2170" y="1910" as="geometry">
+            <mxRectangle height="30" width="340" x="1210" y="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-142" parent="AbAJmDd59ydRJxzXMzCG-140" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;int sacarDePila(t_pila *pila, void *dato, size_t tamDato){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; t_nodo *aux = *pila;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; if(aux==NULL){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //Quiere decir que ya no hay ningun elemento para sacar.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return 0;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; *pila = aux-&amp;gt;sig;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; memcpy(dato, aux-&amp;gt;info, MIN(tamDato, aux-&amp;gt;tamInfo));&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; free(aux-&amp;gt;info);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; free(aux);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; return TODO_BIEN;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="430" x="2.5" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-144" parent="AbAJmDd59ydRJxzXMzCG-140" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;sacarDePila extrae de la pila el elemento tope. Entonces...&lt;/div&gt;Primero, se crea aux para no perder la referencia al nodo que vamos a eliminar. De esta manera podemos cambiar pila sin romper nada. Y es exactamente lo que hacemos, porque a *pila le asignamos la direccion del siguiente nodo. Despues es simplemente guardar el dato que tenia en la info, y liberar tanto a la informacion del nodo auxiliar, y al nodo en si.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;IMPORTANTE: si te fijas el MIN, es igual a lo que pasaba en la pila estatica. No podes confiar completamente en lo que manda el usuario. Tenes que poner el minimo entre lo que te haya mandado el usuario, y el tamanio del dato que estaba guardado en el nodo.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="420" x="7.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-145" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="int verTopeDePila (t_pila *pila, void *dato, size_t tamDato)" vertex="1">
+          <mxGeometry height="375" width="440" x="2630" y="1910" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-146" parent="AbAJmDd59ydRJxzXMzCG-145" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;int verTopeDePila(const t_pila *pila, void *dato, size_t tamDato){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; if(*pila == NULL){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return PILA_VACIA;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; memcpy(dato, (*pila)-&amp;gt;info, MIN(tamDato, (*pila)-&amp;gt;tamInfo));&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; return TODO_BIEN;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="205" width="420" x="10" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-154" parent="AbAJmDd59ydRJxzXMzCG-145" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Sencillo y rapidito. En este caso no queremos extraer el dato, sino simplemente ver que hay en el tope de la pila.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Sabemos que pila es un puntero a puntero, y que *pila representa el nodo que esta en el tope.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Entonces, al desreferenciar pila obtenemos el nodo actual, y podemos acceder a sus campos usando&amp;nbsp; -&amp;gt;.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Por eso se pone:&amp;nbsp;(*pila)-&amp;gt;info&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="380" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-155" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="int pilaLlena (t_pila *pila, size_t tamDato)" vertex="1">
+          <mxGeometry height="350" width="440" x="1710" y="2510" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-156" parent="AbAJmDd59ydRJxzXMzCG-155" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;int pilaLlena(const t_pila *pila, size_t tamDato){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; t_nodo *aux = (t_nodo*)malloc(sizeof(t_nodo));&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; void *info = malloc(tamDato);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; free(aux);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; free(info);&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; return aux == NULL || info == NULL;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="317.5" x="53.75" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-157" parent="AbAJmDd59ydRJxzXMzCG-155" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Bueno, para saber si la pila esta llena, simplemente intentamos crear un nodo mas, con el tamanio del dato que queramos insertar. El chiste aca es que liberamos la memoria que apartamos con los malloc, pero los punteros, en el caso de que aun NO este llena la pila, quedan siendo diferentes a NULL." vertex="1">
+          <mxGeometry height="150" width="420" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-158" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="int pilaVacia(const t_pila *pila)" vertex="1">
+          <mxGeometry height="170" width="250" x="2170" y="2510" as="geometry" />
+        </mxCell>
+        <mxCell id="AbAJmDd59ydRJxzXMzCG-159" parent="AbAJmDd59ydRJxzXMzCG-158" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Si la pila esta vacia, significa que no hay ningun nodo. Y si no hay ningun nodo cargado, *pila directamente apuntaria a NULL.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;int pilaVacia(const t_pila *pila){&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;&amp;nbsp; &amp;nbsp; return *pila == NULL;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;}&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="230" x="10" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
