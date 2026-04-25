@@ -1,9 +1,26 @@
-Estructuras subidas hasta ahora:
-- Pilas estaticas
-- Pilas dinamicas
-- Colas dinamicas
+# Estructuras de Datos en C
 
-Cada estructura subida tiene su explicacion grafica y detallada correspondiente,
-subidas en un archivo que puede visualizarse desde draw.io o similares.
+Repositorio donde desarrollo e implemento distintas estructuras de datos en C, incluyendo tanto versiones estáticas como dinámicas.
 
-Si llegaste buscando entender como funcionan las estructuras, espero que esto te ayude!
+## Contenido actual
+
+- Pilas estáticas
+- Pilas dinámicas
+- Colas dinámicas
+
+## Conceptos trabajados
+
+- Manejo de memoria dinámica (`malloc`, `free`)
+- Uso de punteros
+- Implementación modular
+- Abstracción de estructuras de datos
+
+## Organización
+
+Cada estructura se encuentra en su propia carpeta, con:
+- Implementación en C
+- Explicación gráfica (archivos compatibles con draw.io)
+
+## Objetivo
+
+Este repositorio forma parte de mi práctica en estructuras de datos y está orientado a reforzar conceptos fundamentales utilizados en programación y entrevistas técnicas.
