@@ -6,7 +6,7 @@ void crearCola(t_cola *cola){
     cola->primero = cola->ultimo = NULL;
 }
 
-void vaciarCola(t_cola *cola){
+void eliminarCola(t_cola *cola){
     while(cola->primero){
         t_nodo *eliminar = cola->primero;
         cola->primero = eliminar->sig;

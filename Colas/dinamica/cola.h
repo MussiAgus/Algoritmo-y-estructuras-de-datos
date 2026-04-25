@@ -18,7 +18,7 @@ typedef struct{
 }t_cola;
 
 void crearCola(t_cola*);
-void vaciarCola(t_cola*);
+void eliminarCola(t_cola*);
 
 int ponerEnCola(t_cola*,void*,size_t);
 int sacarDeCola(t_cola*,void*,size_t);
