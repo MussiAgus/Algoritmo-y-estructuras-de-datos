@@ -1,0 +1,644 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="3euq7vDRYtog1uwp9pX5">
+    <mxGraphModel dx="-2353" dy="-573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-10" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Nodos : Idea basica" vertex="1">
+          <mxGeometry height="430" width="590" x="3550" y="1650" as="geometry">
+            <mxRectangle height="30" width="80" x="1110" y="1710" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-11" parent="Vh8Of3S5zd6qpqoBYnjE-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="En las pilas dinamicas hay una nueva estructura (que sera importante de ahora en adelante), llamada &quot;nodo&quot;. &lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;Un nodo es una estructura que adentro tiene:&lt;/font&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;Un void *info que apunta al dato almacenado.&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 217, 102));&quot;&gt;Un size_t tamInfo que indica el tamaño del dato.&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Un puntero a otro nodo que permite encadenar nodos entre sí. O sea, un puntero a la misma estructura, llamado &quot;siguiente&quot;.&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;Esto ultimo es lo mas importante, porque cada nodo conoce al que le sigue (es una estructura recursiva). Esto te deja formar una lista enlazada, que es la base de la pila dinamica.&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;Como nota, al hacer typedef struct hay que primero ponerle un nombre, para que pueda ser llamado dentro (sino es como que estas llamando a snodo, que todavia no existe). Entonces te queda algo como:&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;typedef struct snodo{&lt;/p&gt;&lt;p data-start=&quot;395&quot; data-end=&quot;434&quot;&gt;}t_nodo;&lt;/p&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="390" width="335" x="10.27" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-12" parent="Vh8Of3S5zd6qpqoBYnjE-10" style="rounded=0;whiteSpace=wrap;html=1;" value="void *info" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-13" parent="Vh8Of3S5zd6qpqoBYnjE-10" style="rounded=0;whiteSpace=wrap;html=1;" value="struct snodo *siguiente" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-14" parent="Vh8Of3S5zd6qpqoBYnjE-10" style="rounded=0;whiteSpace=wrap;html=1;" value="size_t tamInfo" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-15" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Idea principal de las listas" vertex="1">
+          <mxGeometry height="235" width="500" x="4160" y="1650" as="geometry">
+            <mxRectangle height="30" width="130" x="1730" y="1710" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-44" parent="Vh8Of3S5zd6qpqoBYnjE-15" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(255, 217, 102), rgb(255, 217, 102));&quot;&gt;Idea Principal&lt;/font&gt;: Es un modelo dinámico que organiza la información como una cadena de nodos conectados de forma unidireccional&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;. Cada nodo guarda los datos y un puntero (sig) que &quot;engancha&quot; al siguiente elemento, terminando siempre en NULL&lt;/span&gt;&lt;/div&gt;&lt;div&gt;.&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(255, 217, 102), rgb(255, 217, 102));&quot;&gt;Cuándo se usa&lt;/font&gt;: Para modelar eventos reales (listas de alumnos, pedidos, movimientos bancarios) donde la cantidad de elementos es variable y se necesita flexibilidad para insertar o eliminar en cualquier posición&lt;/div&gt;&lt;div&gt;.&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(255, 217, 102), rgb(255, 217, 102));&quot;&gt;Cuándo NO se usa&lt;/font&gt;: No es la mejor opción si necesitas recorrer la información hacia atrás (para eso están las listas dobles) o si buscas máxima velocidad en operaciones que modelos más sofisticados (con punteros al final o circulares) resuelven mejor&lt;/div&gt;" vertex="1">
+          <mxGeometry height="215" width="454.73" x="22.63" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-38" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Idea basica de las listas" vertex="1">
+          <mxGeometry height="950" width="830.27" x="3550" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-40" parent="Vh8Of3S5zd6qpqoBYnjE-38" style="swimlane;whiteSpace=wrap;html=1;" value="Primero" vertex="1">
+          <mxGeometry height="195" width="755" x="35" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-4" parent="Vh8Of3S5zd6qpqoBYnjE-40" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="170" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-6" parent="Vh8Of3S5zd6qpqoBYnjE-4" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-7" parent="Vh8Of3S5zd6qpqoBYnjE-4" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-8" parent="Vh8Of3S5zd6qpqoBYnjE-4" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-17" parent="Vh8Of3S5zd6qpqoBYnjE-40" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Este es un nodo&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="520" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-41" parent="Vh8Of3S5zd6qpqoBYnjE-38" style="swimlane;whiteSpace=wrap;html=1;" value="Segundo" vertex="1">
+          <mxGeometry height="217" width="755" x="35" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-18" parent="Vh8Of3S5zd6qpqoBYnjE-41" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="15.269999999999982" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-19" parent="Vh8Of3S5zd6qpqoBYnjE-41" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="205.26999999999998" y="37" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-20" parent="Vh8Of3S5zd6qpqoBYnjE-19" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-21" parent="Vh8Of3S5zd6qpqoBYnjE-19" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-22" parent="Vh8Of3S5zd6qpqoBYnjE-19" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-24" parent="Vh8Of3S5zd6qpqoBYnjE-41" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;t_lista&lt;/h1&gt;&lt;div&gt;Una variable del tipo t_lista, simplemente es una variable creada para apuntar a un t_nodo&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="555.2700000000004" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-23" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-41" source="Vh8Of3S5zd6qpqoBYnjE-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Vh8Of3S5zd6qpqoBYnjE-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-43" parent="Vh8Of3S5zd6qpqoBYnjE-38" style="swimlane;whiteSpace=wrap;html=1;" value="Tercero..." vertex="1">
+          <mxGeometry height="430" width="755" x="35" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-25" parent="Vh8Of3S5zd6qpqoBYnjE-43" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="19.99999999999997" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-26" parent="Vh8Of3S5zd6qpqoBYnjE-43" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="202.64" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-27" parent="Vh8Of3S5zd6qpqoBYnjE-26" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-28" parent="Vh8Of3S5zd6qpqoBYnjE-26" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-29" parent="Vh8Of3S5zd6qpqoBYnjE-26" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-37" parent="Vh8Of3S5zd6qpqoBYnjE-43" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Cuando hay mas de un nodo...&lt;/h1&gt;&lt;div&gt;t_lista siempre apunta al primer elemento de la lista. Es una referencia; un ancla. Los nodos estan conectados entre ellos mismos, desde su variable &quot;siguiente&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="187.64" x="550" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-31" parent="Vh8Of3S5zd6qpqoBYnjE-43" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="202.64" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-32" parent="Vh8Of3S5zd6qpqoBYnjE-31" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-33" parent="Vh8Of3S5zd6qpqoBYnjE-31" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-34" parent="Vh8Of3S5zd6qpqoBYnjE-31" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-36" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-43" source="Vh8Of3S5zd6qpqoBYnjE-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="Vh8Of3S5zd6qpqoBYnjE-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="542.6400000000004" y="184" />
+              <mxPoint x="542.6400000000004" y="297" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-30" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-43" source="Vh8Of3S5zd6qpqoBYnjE-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Vh8Of3S5zd6qpqoBYnjE-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-46" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Pros y contras" vertex="1">
+          <mxGeometry height="190" width="500" x="4160" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;color: light-dark(rgb(255, 217, 102), rgb(255, 217, 102));&quot;&gt;Pros&lt;/font&gt;:&lt;div&gt;&amp;nbsp;Se pueden agregar y sacar elementos muy rapido.&lt;div&gt;Los nodos no se guardan todos juntos. Se guardan donde haya espacio.&lt;/div&gt;&lt;div&gt;Pueden tener longitud variable.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(255, 217, 102), rgb(255, 217, 102));&quot;&gt;Contras&lt;/font&gt;:&lt;/div&gt;&lt;div&gt;No tienen nocion de indice. Si quiero buscar algo, tengo que iterar hasta la, por ejemplo, quinta posicion.&lt;/div&gt;&lt;div&gt;Necesitan almacenar punteros, por lo que ocupan mas espacio en memoria.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="460" x="4180" y="1920" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-48" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Aclaraciones" vertex="1">
+          <mxGeometry height="540" width="830" x="3550.27" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-49" parent="Vh8Of3S5zd6qpqoBYnjE-48" style="swimlane;whiteSpace=wrap;html=1;" value="Que hace un t_lista?" vertex="1">
+          <mxGeometry height="270" width="790" x="17.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-13" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-49" source="e0WEO4OBnsQHf_UBvTUx-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="e0WEO4OBnsQHf_UBvTUx-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-25" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-49" source="e0WEO4OBnsQHf_UBvTUx-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-8" parent="Vh8Of3S5zd6qpqoBYnjE-49" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="50" width="70" x="175" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-10" parent="Vh8Of3S5zd6qpqoBYnjE-49" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="t_lista lo que hace es apuntar a una estructura t_nodo" vertex="1">
+          <mxGeometry height="70" width="120" x="35" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-23" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-49" source="e0WEO4OBnsQHf_UBvTUx-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="e0WEO4OBnsQHf_UBvTUx-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-11" parent="Vh8Of3S5zd6qpqoBYnjE-49" style="rounded=0;whiteSpace=wrap;html=1;" value="lista" vertex="1">
+          <mxGeometry height="50" width="90" x="425" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-14" parent="Vh8Of3S5zd6qpqoBYnjE-49" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Entonces, creo una variable de este tipo, basicamente un puntero preparado para recibir t_nodos" vertex="1">
+          <mxGeometry height="100" width="140" x="265" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-22" parent="Vh8Of3S5zd6qpqoBYnjE-49" style="rounded=0;whiteSpace=wrap;html=1;" value="lista == NULL" vertex="1">
+          <mxGeometry height="50" width="120" x="635" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-24" parent="Vh8Of3S5zd6qpqoBYnjE-49" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Entonces, aca le estoy diciendo que lista no apunta a nada." vertex="1">
+          <mxGeometry height="60" width="150" x="625" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-50" parent="Vh8Of3S5zd6qpqoBYnjE-48" style="swimlane;whiteSpace=wrap;html=1;" value="Envio de parametro &amp;amp;lista" vertex="1">
+          <mxGeometry height="190" width="795" x="17.5" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-30" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-50" source="e0WEO4OBnsQHf_UBvTUx-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="e0WEO4OBnsQHf_UBvTUx-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-26" parent="Vh8Of3S5zd6qpqoBYnjE-50" style="rounded=0;whiteSpace=wrap;html=1;" value="lista" vertex="1">
+          <mxGeometry height="40" width="80" x="10" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-32" edge="1" parent="Vh8Of3S5zd6qpqoBYnjE-50" source="e0WEO4OBnsQHf_UBvTUx-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="e0WEO4OBnsQHf_UBvTUx-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-28" parent="Vh8Of3S5zd6qpqoBYnjE-50" style="rounded=0;whiteSpace=wrap;html=1;" value="&amp;amp;lista" vertex="1">
+          <mxGeometry height="40" width="80" x="210" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-29" parent="Vh8Of3S5zd6qpqoBYnjE-50" style="rounded=0;whiteSpace=wrap;html=1;" value="*lista" vertex="1">
+          <mxGeometry height="40" width="80" x="410" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-31" parent="Vh8Of3S5zd6qpqoBYnjE-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Esto es lo que se manda a la funcion" vertex="1">
+          <mxGeometry height="30" width="60" x="110" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-33" parent="Vh8Of3S5zd6qpqoBYnjE-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Esto es lo que recibe la funcion" vertex="1">
+          <mxGeometry height="30" width="60" x="320" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e0WEO4OBnsQHf_UBvTUx-35" parent="Vh8Of3S5zd6qpqoBYnjE-50" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="*lista apunta a la lista del main, la cual apunta al primer nodo de la lista. Si yo cambio *lista, simplemente estoy apuntando&amp;nbsp;" vertex="1">
+          <mxGeometry height="45" width="285" x="510" y="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh8Of3S5zd6qpqoBYnjE-51" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Paso a paso de InsertarElementoComienzo" vertex="1">
+          <mxGeometry height="2260" width="700" x="3550.27" y="3100" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-1" parent="Vh8Of3S5zd6qpqoBYnjE-51" style="swimlane;whiteSpace=wrap;html=1;" value="Antes del cambio" vertex="1">
+          <mxGeometry height="435" width="660" x="20" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-24" edge="1" parent="nHizgKOTyAuirEjp7zug-1" source="nHizgKOTyAuirEjp7zug-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-13" parent="nHizgKOTyAuirEjp7zug-1" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="70" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-14" parent="nHizgKOTyAuirEjp7zug-1" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-15" parent="nHizgKOTyAuirEjp7zug-14" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-16" parent="nHizgKOTyAuirEjp7zug-14" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-17" parent="nHizgKOTyAuirEjp7zug-14" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-18" parent="nHizgKOTyAuirEjp7zug-1" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-19" parent="nHizgKOTyAuirEjp7zug-18" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-20" parent="nHizgKOTyAuirEjp7zug-18" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-21" parent="nHizgKOTyAuirEjp7zug-18" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-22" edge="1" parent="nHizgKOTyAuirEjp7zug-1" source="nHizgKOTyAuirEjp7zug-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="592.6400000000003" y="169" />
+              <mxPoint x="592.6400000000003" y="282" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-25" parent="nHizgKOTyAuirEjp7zug-1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Ponele que tenes algo asi...&lt;/h1&gt;&lt;div&gt;t_lista apunta al primer elemento de la lista, y este tiene la direccion del siguiente elemento.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="240" x="10" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-26" parent="Vh8Of3S5zd6qpqoBYnjE-51" style="swimlane;whiteSpace=wrap;html=1;" value="Creando nuevo nodo..." vertex="1">
+          <mxGeometry height="580" width="660" x="20" y="480" as="geometry">
+            <mxRectangle height="30" width="160" x="20" y="480" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-27" edge="1" parent="nHizgKOTyAuirEjp7zug-26" source="nHizgKOTyAuirEjp7zug-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-28" parent="nHizgKOTyAuirEjp7zug-26" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="60" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-29" parent="nHizgKOTyAuirEjp7zug-26" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-30" parent="nHizgKOTyAuirEjp7zug-29" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-31" parent="nHizgKOTyAuirEjp7zug-29" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-32" parent="nHizgKOTyAuirEjp7zug-29" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-33" parent="nHizgKOTyAuirEjp7zug-26" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-34" parent="nHizgKOTyAuirEjp7zug-33" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-35" parent="nHizgKOTyAuirEjp7zug-33" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-36" parent="nHizgKOTyAuirEjp7zug-33" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-37" edge="1" parent="nHizgKOTyAuirEjp7zug-26" source="nHizgKOTyAuirEjp7zug-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="602.6400000000003" y="334" />
+              <mxPoint x="602.6400000000003" y="447" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-38" parent="nHizgKOTyAuirEjp7zug-26" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Si queres agregar uno nuevo...&lt;/h1&gt;&lt;div&gt;Primero vas a tener que crearlo, y cargar sus respectivos datos.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="240" x="10" y="47.5" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-39" parent="nHizgKOTyAuirEjp7zug-26" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Nodo a agregar" vertex="1">
+          <mxGeometry height="150" width="320" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-40" parent="nHizgKOTyAuirEjp7zug-39" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-41" parent="nHizgKOTyAuirEjp7zug-39" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-42" parent="nHizgKOTyAuirEjp7zug-39" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-43" parent="nHizgKOTyAuirEjp7zug-26" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Todo listo! Como se conecta?&lt;/h1&gt;&lt;div&gt;Bueno, es tan simple como seguir dos pasos! Primero, deberias asignarle al &quot;siguiente&quot; del nuevo nodo, la direccion del primero! (Ya que estas insertando en el primer lugar, y el antiguo primero pasara a ser el segundo). Y quien tiene la direccion del primer elemento? Exacto! El t_lista que trajiste del main.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="240" x="20" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-44" parent="Vh8Of3S5zd6qpqoBYnjE-51" style="swimlane;whiteSpace=wrap;html=1;" value="Conectandolo a la lista." vertex="1">
+          <mxGeometry height="580" width="660" x="20" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-45" edge="1" parent="nHizgKOTyAuirEjp7zug-44" source="nHizgKOTyAuirEjp7zug-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-46" parent="nHizgKOTyAuirEjp7zug-44" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="60" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-47" parent="nHizgKOTyAuirEjp7zug-44" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-48" parent="nHizgKOTyAuirEjp7zug-47" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-49" parent="nHizgKOTyAuirEjp7zug-47" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-50" parent="nHizgKOTyAuirEjp7zug-47" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-51" parent="nHizgKOTyAuirEjp7zug-44" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-52" parent="nHizgKOTyAuirEjp7zug-51" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-53" parent="nHizgKOTyAuirEjp7zug-51" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-54" parent="nHizgKOTyAuirEjp7zug-51" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-55" edge="1" parent="nHizgKOTyAuirEjp7zug-44" source="nHizgKOTyAuirEjp7zug-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-51">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="602.6400000000003" y="334" />
+              <mxPoint x="602.6400000000003" y="447" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-56" parent="nHizgKOTyAuirEjp7zug-44" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Pero que pasa con el t_lista?&lt;/h1&gt;&lt;div&gt;Bueno...ese sigue apuntando al que antes era el primer nodo, no? Entonces, una vez que nos aseguramos de que no vamos a perder la direccion de Nodo 1, le decimos a t_lista que apunte a la direccion del nuevo nodo.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="182.5" width="240" x="10" y="47.5" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-57" parent="nHizgKOTyAuirEjp7zug-44" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-58" parent="nHizgKOTyAuirEjp7zug-57" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-59" parent="nHizgKOTyAuirEjp7zug-57" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-60" parent="nHizgKOTyAuirEjp7zug-57" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-62" edge="1" parent="nHizgKOTyAuirEjp7zug-44" source="nHizgKOTyAuirEjp7zug-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-65" parent="Vh8Of3S5zd6qpqoBYnjE-51" style="swimlane;whiteSpace=wrap;html=1;" value="Finalmente..." vertex="1">
+          <mxGeometry height="580" width="660" x="20" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-83" edge="1" parent="nHizgKOTyAuirEjp7zug-65" source="nHizgKOTyAuirEjp7zug-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-67" parent="nHizgKOTyAuirEjp7zug-65" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="60" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-68" parent="nHizgKOTyAuirEjp7zug-65" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-69" parent="nHizgKOTyAuirEjp7zug-68" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-70" parent="nHizgKOTyAuirEjp7zug-68" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-71" parent="nHizgKOTyAuirEjp7zug-68" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-72" parent="nHizgKOTyAuirEjp7zug-65" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-73" parent="nHizgKOTyAuirEjp7zug-72" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-74" parent="nHizgKOTyAuirEjp7zug-72" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-75" parent="nHizgKOTyAuirEjp7zug-72" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-76" edge="1" parent="nHizgKOTyAuirEjp7zug-65" source="nHizgKOTyAuirEjp7zug-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-72">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="334" />
+              <mxPoint x="590" y="448" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-77" parent="nHizgKOTyAuirEjp7zug-65" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Terminamos!&lt;/h1&gt;&lt;div&gt;t_lista ahora apunta nuevamente al inicio de la lista, y nos aseguramos de que cada nodo tiene la direccion del siguiente que les corresponde.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="240" x="10" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-78" parent="nHizgKOTyAuirEjp7zug-65" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-79" parent="nHizgKOTyAuirEjp7zug-78" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-80" parent="nHizgKOTyAuirEjp7zug-78" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-81" parent="nHizgKOTyAuirEjp7zug-78" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-82" edge="1" parent="nHizgKOTyAuirEjp7zug-65" source="nHizgKOTyAuirEjp7zug-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-84" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Paso a paso de InsertarElementoComienzo" vertex="1">
+          <mxGeometry height="2260" width="700" x="4310" y="3100" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-85" parent="nHizgKOTyAuirEjp7zug-84" style="swimlane;whiteSpace=wrap;html=1;" value="Antes del cambio" vertex="1">
+          <mxGeometry height="435" width="660" x="20" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-86" edge="1" parent="nHizgKOTyAuirEjp7zug-85" source="nHizgKOTyAuirEjp7zug-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-87" parent="nHizgKOTyAuirEjp7zug-85" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="70" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-88" parent="nHizgKOTyAuirEjp7zug-85" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-89" parent="nHizgKOTyAuirEjp7zug-88" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-90" parent="nHizgKOTyAuirEjp7zug-88" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-91" parent="nHizgKOTyAuirEjp7zug-88" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-92" parent="nHizgKOTyAuirEjp7zug-85" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-93" parent="nHizgKOTyAuirEjp7zug-92" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-94" parent="nHizgKOTyAuirEjp7zug-92" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-95" parent="nHizgKOTyAuirEjp7zug-92" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-96" edge="1" parent="nHizgKOTyAuirEjp7zug-85" source="nHizgKOTyAuirEjp7zug-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-92">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="592.6400000000003" y="169" />
+              <mxPoint x="592.6400000000003" y="282" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-97" parent="nHizgKOTyAuirEjp7zug-85" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Ponele que tenes algo asi...&lt;/h1&gt;&lt;div&gt;t_lista apunta al primer elemento de la lista, y este tiene la direccion del siguiente elemento.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="240" x="10" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-98" parent="nHizgKOTyAuirEjp7zug-84" style="swimlane;whiteSpace=wrap;html=1;" value="Creando nuevo nodo..." vertex="1">
+          <mxGeometry height="580" width="660" x="20" y="480" as="geometry">
+            <mxRectangle height="30" width="160" x="20" y="480" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-99" edge="1" parent="nHizgKOTyAuirEjp7zug-98" source="nHizgKOTyAuirEjp7zug-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-100" parent="nHizgKOTyAuirEjp7zug-98" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="60" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-101" parent="nHizgKOTyAuirEjp7zug-98" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-102" parent="nHizgKOTyAuirEjp7zug-101" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-103" parent="nHizgKOTyAuirEjp7zug-101" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-104" parent="nHizgKOTyAuirEjp7zug-101" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-105" parent="nHizgKOTyAuirEjp7zug-98" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-106" parent="nHizgKOTyAuirEjp7zug-105" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-107" parent="nHizgKOTyAuirEjp7zug-105" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-108" parent="nHizgKOTyAuirEjp7zug-105" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-109" edge="1" parent="nHizgKOTyAuirEjp7zug-98" source="nHizgKOTyAuirEjp7zug-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-105">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="602.6400000000003" y="334" />
+              <mxPoint x="602.6400000000003" y="447" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-110" parent="nHizgKOTyAuirEjp7zug-98" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Si queres agregar uno nuevo...&lt;/h1&gt;&lt;div&gt;Primero vas a tener que crearlo, y cargar sus respectivos datos.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="240" x="10" y="47.5" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-111" parent="nHizgKOTyAuirEjp7zug-98" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Nodo a agregar" vertex="1">
+          <mxGeometry height="150" width="320" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-112" parent="nHizgKOTyAuirEjp7zug-111" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-113" parent="nHizgKOTyAuirEjp7zug-111" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-114" parent="nHizgKOTyAuirEjp7zug-111" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-115" parent="nHizgKOTyAuirEjp7zug-98" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Todo listo! Como se conecta?&lt;/h1&gt;&lt;div&gt;Bueno, es tan simple como seguir dos pasos! Primero, deberias asignarle al &quot;siguiente&quot; del nuevo nodo, la direccion del primero! (Ya que estas insertando en el primer lugar, y el antiguo primero pasara a ser el segundo). Y quien tiene la direccion del primer elemento? Exacto! El t_lista que trajiste del main.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="240" x="20" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-116" parent="nHizgKOTyAuirEjp7zug-84" style="swimlane;whiteSpace=wrap;html=1;" value="Conectandolo a la lista." vertex="1">
+          <mxGeometry height="580" width="660" x="20" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-117" edge="1" parent="nHizgKOTyAuirEjp7zug-116" source="nHizgKOTyAuirEjp7zug-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-119">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-118" parent="nHizgKOTyAuirEjp7zug-116" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="60" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-119" parent="nHizgKOTyAuirEjp7zug-116" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-120" parent="nHizgKOTyAuirEjp7zug-119" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-121" parent="nHizgKOTyAuirEjp7zug-119" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-122" parent="nHizgKOTyAuirEjp7zug-119" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-123" parent="nHizgKOTyAuirEjp7zug-116" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-124" parent="nHizgKOTyAuirEjp7zug-123" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-125" parent="nHizgKOTyAuirEjp7zug-123" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-126" parent="nHizgKOTyAuirEjp7zug-123" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-127" edge="1" parent="nHizgKOTyAuirEjp7zug-116" source="nHizgKOTyAuirEjp7zug-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-123">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="602.6400000000003" y="334" />
+              <mxPoint x="602.6400000000003" y="447" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-128" parent="nHizgKOTyAuirEjp7zug-116" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Pero que pasa con el t_lista?&lt;/h1&gt;&lt;div&gt;Bueno...ese sigue apuntando al que antes era el primer nodo, no? Entonces, una vez que nos aseguramos de que no vamos a perder la direccion de Nodo 1, le decimos a t_lista que apunte a la direccion del nuevo nodo.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="182.5" width="240" x="10" y="47.5" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-129" parent="nHizgKOTyAuirEjp7zug-116" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-130" parent="nHizgKOTyAuirEjp7zug-129" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-131" parent="nHizgKOTyAuirEjp7zug-129" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-132" parent="nHizgKOTyAuirEjp7zug-129" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-133" edge="1" parent="nHizgKOTyAuirEjp7zug-116" source="nHizgKOTyAuirEjp7zug-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-119">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-134" parent="nHizgKOTyAuirEjp7zug-84" style="swimlane;whiteSpace=wrap;html=1;" value="Finalmente..." vertex="1">
+          <mxGeometry height="580" width="660" x="20" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-135" edge="1" parent="nHizgKOTyAuirEjp7zug-134" source="nHizgKOTyAuirEjp7zug-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-147">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-136" parent="nHizgKOTyAuirEjp7zug-134" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="60" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-137" parent="nHizgKOTyAuirEjp7zug-134" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-138" parent="nHizgKOTyAuirEjp7zug-137" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-139" parent="nHizgKOTyAuirEjp7zug-137" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-140" parent="nHizgKOTyAuirEjp7zug-137" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-141" parent="nHizgKOTyAuirEjp7zug-134" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="262.6399999999994" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-142" parent="nHizgKOTyAuirEjp7zug-141" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-143" parent="nHizgKOTyAuirEjp7zug-141" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-144" parent="nHizgKOTyAuirEjp7zug-141" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-145" edge="1" parent="nHizgKOTyAuirEjp7zug-134" source="nHizgKOTyAuirEjp7zug-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-141">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="334" />
+              <mxPoint x="590" y="448" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-146" parent="nHizgKOTyAuirEjp7zug-134" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Terminamos!&lt;/h1&gt;&lt;div&gt;t_lista ahora apunta nuevamente al inicio de la lista, y nos aseguramos de que cada nodo tiene la direccion del siguiente que les corresponde.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="240" x="10" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-147" parent="nHizgKOTyAuirEjp7zug-134" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-148" parent="nHizgKOTyAuirEjp7zug-147" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-149" parent="nHizgKOTyAuirEjp7zug-147" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-150" parent="nHizgKOTyAuirEjp7zug-147" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="nHizgKOTyAuirEjp7zug-151" edge="1" parent="nHizgKOTyAuirEjp7zug-134" source="nHizgKOTyAuirEjp7zug-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="nHizgKOTyAuirEjp7zug-137">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
