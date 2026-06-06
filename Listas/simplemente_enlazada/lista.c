@@ -66,6 +66,32 @@ int insertarElementoFinal(t_lista *lista, const void *dato, size_t tamDato){
     *lista = nuevo;
     return TODO_BIEN;
 }
+int insertarEnOrden(t_lista *lista, const void *dato, size_t tamDato, int(*cmp)(void*,void*)){
+
+    t_nodo *nuevo = (t_nodo*)malloc(sizeof(t_nodo));
+    if(!nuevo){
+        return SIN_MEM;
+    }
+    nuevo->info=malloc(tamDato);
+    if(!nuevo->info){
+        free(nuevo);
+        return SIN_MEM;
+    }
+
+    memcpy(nuevo->info,dato,tamDato);
+    nuevo->tamInfo=tamDato;
+
+    while(*lista && cmp( (*lista)->info, dato)<0){
+        lista = &(*lista)->siguiente;
+    }
+
+
+    nuevo->siguiente=*lista;
+    *lista=nuevo;
+
+    return TODO_BIEN;
+}
+
 
 int sacarPrimerElemento(t_lista *lista, void *dato, size_t tamDato){
     t_nodo *aux = *lista;
@@ -84,12 +110,13 @@ int sacarUltimoElemento(t_lista *lista, void *dato, size_t tamDato){
     if(*lista==NULL)
         return 0;
 
-    while(*lista){
+    while((*lista)->siguiente){
         lista = &(*lista)->siguiente;
     }
     memcpy(dato, (*lista)->info, MIN(tamDato,(*lista)->tamInfo));
     free( (*lista)->info );
     free(*lista);
+    *lista=NULL;
     return TODO_BIEN;
 }
 
