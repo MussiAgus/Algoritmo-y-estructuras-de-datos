@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="3euq7vDRYtog1uwp9pX5">
-    <mxGraphModel dx="-916" dy="453" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="-260" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -578,6 +578,622 @@
         </mxCell>
         <mxCell id="_LPDqxuz1HFvSdkyO1Iw-50" parent="nHizgKOTyAuirEjp7zug-84" style="rounded=0;whiteSpace=wrap;html=1;" value="Como p ahora esta apuntando a la direccion de memoria de la casilla Siguiente, en el Nodo 1. Por lo tanto, si hiciera *p estaria accediendo directamente al Nodo 2. Finalmente, entonces si hicieramos:&lt;div&gt;(*p)-&amp;gt;info, tendriamos acceso a la informacion del Nodo 2. De esa forma podes ir viendo el contenido de cada nodo. Y es genial, porque siempre estas viendo al siguiente nodo, desde el anterior. Por lo que si tenes que borrarlo o cambiarlo, se puede hacer muy rapido.&lt;/div&gt;" vertex="1">
           <mxGeometry height="140" width="640" x="20" y="2250" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-1" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="ponerAlFinal" vertex="1">
+          <mxGeometry height="2480" width="1090" x="5030" y="3100" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-2" parent="eieaO2LlE6_dv7Pf06_k-1" style="swimlane;whiteSpace=wrap;html=1;" value="Antes del cambio" vertex="1">
+          <mxGeometry height="435" width="1050" x="20" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-3" edge="1" parent="eieaO2LlE6_dv7Pf06_k-2" source="eieaO2LlE6_dv7Pf06_k-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-4" parent="eieaO2LlE6_dv7Pf06_k-2" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="70" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-5" parent="eieaO2LlE6_dv7Pf06_k-2" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-6" parent="eieaO2LlE6_dv7Pf06_k-5" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-7" parent="eieaO2LlE6_dv7Pf06_k-5" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-8" parent="eieaO2LlE6_dv7Pf06_k-5" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-9" parent="eieaO2LlE6_dv7Pf06_k-2" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-10" parent="eieaO2LlE6_dv7Pf06_k-9" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-11" parent="eieaO2LlE6_dv7Pf06_k-9" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-12" parent="eieaO2LlE6_dv7Pf06_k-9" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-13" edge="1" parent="eieaO2LlE6_dv7Pf06_k-2" source="eieaO2LlE6_dv7Pf06_k-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="592.6400000000003" y="169" />
+              <mxPoint x="592.6400000000003" y="282" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-69" parent="eieaO2LlE6_dv7Pf06_k-2" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Empezamos asi...&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Ponele que tenes esto en el main. Ahora queres agregar un nuevo nodo al final de la lista.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Tambien ponele que cargaste el dato en una variable void, y que lo mandas en los parametros de la funcion, junto con su tamano.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Bueno como hay que empezar? Primero, hay que crear el nodo.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="205" width="300" x="630" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-70" parent="eieaO2LlE6_dv7Pf06_k-1" style="swimlane;whiteSpace=wrap;html=1;" value="Creando el nuevo nodo..." vertex="1">
+          <mxGeometry height="435" width="1050" x="20" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-71" edge="1" parent="eieaO2LlE6_dv7Pf06_k-70" source="eieaO2LlE6_dv7Pf06_k-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-72" parent="eieaO2LlE6_dv7Pf06_k-70" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="70" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-73" parent="eieaO2LlE6_dv7Pf06_k-70" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-74" parent="eieaO2LlE6_dv7Pf06_k-73" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-75" parent="eieaO2LlE6_dv7Pf06_k-73" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-76" parent="eieaO2LlE6_dv7Pf06_k-73" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-77" parent="eieaO2LlE6_dv7Pf06_k-70" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-78" parent="eieaO2LlE6_dv7Pf06_k-77" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-79" parent="eieaO2LlE6_dv7Pf06_k-77" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-80" parent="eieaO2LlE6_dv7Pf06_k-77" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-81" edge="1" parent="eieaO2LlE6_dv7Pf06_k-70" source="eieaO2LlE6_dv7Pf06_k-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-77">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="592.6400000000003" y="169" />
+              <mxPoint x="592.6400000000003" y="282" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-83" parent="eieaO2LlE6_dv7Pf06_k-70" style="swimlane;whiteSpace=wrap;html=1;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="650" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-84" parent="eieaO2LlE6_dv7Pf06_k-83" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-85" parent="eieaO2LlE6_dv7Pf06_k-83" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-86" parent="eieaO2LlE6_dv7Pf06_k-83" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-88" parent="eieaO2LlE6_dv7Pf06_k-70" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;REGLA&lt;/h1&gt;&lt;div&gt;Siempre que crees las cosas, fijate que haya espacio para eso. Entonces, apenas entras, crear un nuevo nodo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Tambien vas a tener que, en nuevo-&amp;gt;info reservar el espacio para el dato que queres meter. Finalmente con un memcpy copias el dato, en el espacio del nuevo nodo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Ahora ya tenes todo cargado! Pero...como lo conectamos?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="390" x="650" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-109" edge="1" parent="eieaO2LlE6_dv7Pf06_k-70" source="eieaO2LlE6_dv7Pf06_k-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-108" parent="eieaO2LlE6_dv7Pf06_k-70" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="70" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-89" parent="eieaO2LlE6_dv7Pf06_k-1" style="swimlane;whiteSpace=wrap;html=1;" value="Antes de conectarlo..." vertex="1">
+          <mxGeometry height="435" width="1050" x="20" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-90" edge="1" parent="eieaO2LlE6_dv7Pf06_k-89" source="eieaO2LlE6_dv7Pf06_k-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-91" parent="eieaO2LlE6_dv7Pf06_k-89" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="70" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-92" parent="eieaO2LlE6_dv7Pf06_k-89" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-93" parent="eieaO2LlE6_dv7Pf06_k-92" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-94" parent="eieaO2LlE6_dv7Pf06_k-92" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-95" parent="eieaO2LlE6_dv7Pf06_k-92" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-96" parent="eieaO2LlE6_dv7Pf06_k-89" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="252.63999999999942" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-97" parent="eieaO2LlE6_dv7Pf06_k-96" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-98" parent="eieaO2LlE6_dv7Pf06_k-96" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-99" parent="eieaO2LlE6_dv7Pf06_k-96" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-100" edge="1" parent="eieaO2LlE6_dv7Pf06_k-89" source="eieaO2LlE6_dv7Pf06_k-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-96">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="592.6400000000003" y="169" />
+              <mxPoint x="592.6400000000003" y="282" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-101" parent="eieaO2LlE6_dv7Pf06_k-89" style="swimlane;whiteSpace=wrap;html=1;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="650" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-102" parent="eieaO2LlE6_dv7Pf06_k-101" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-103" parent="eieaO2LlE6_dv7Pf06_k-101" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-104" parent="eieaO2LlE6_dv7Pf06_k-101" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-111" edge="1" parent="eieaO2LlE6_dv7Pf06_k-89" source="eieaO2LlE6_dv7Pf06_k-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-110" parent="eieaO2LlE6_dv7Pf06_k-89" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="70" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-112" parent="eieaO2LlE6_dv7Pf06_k-89" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Como seguimos&lt;/h1&gt;&lt;div&gt;Tenemos que lograr que p avance hasta que p-&amp;gt;sig sea igual a NULL. Ese, logicamente, seria el final. O sea, te paras en el elemento de la lista y le preguntas&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Che, tu siguiente apunta hacia algun lado?&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Y si te responde NULL, es que era el ultimo. Y por lo tanto lo que quieras meter, lo vas a conectar despues de el.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="350" x="650" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-113" parent="eieaO2LlE6_dv7Pf06_k-1" style="swimlane;whiteSpace=wrap;html=1;" value="Buscando el ultimo nodo de la lista" vertex="1">
+          <mxGeometry height="435" width="1050" x="20" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-114" edge="1" parent="eieaO2LlE6_dv7Pf06_k-113" source="eieaO2LlE6_dv7Pf06_k-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-115" parent="eieaO2LlE6_dv7Pf06_k-113" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-116" parent="eieaO2LlE6_dv7Pf06_k-113" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-117" parent="eieaO2LlE6_dv7Pf06_k-116" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-118" parent="eieaO2LlE6_dv7Pf06_k-116" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-119" parent="eieaO2LlE6_dv7Pf06_k-116" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-120" parent="eieaO2LlE6_dv7Pf06_k-113" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-121" parent="eieaO2LlE6_dv7Pf06_k-120" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-122" parent="eieaO2LlE6_dv7Pf06_k-120" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-123" parent="eieaO2LlE6_dv7Pf06_k-120" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-124" edge="1" parent="eieaO2LlE6_dv7Pf06_k-113" source="eieaO2LlE6_dv7Pf06_k-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-120">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="532.6400000000003" y="174" />
+              <mxPoint x="532.6400000000003" y="287" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-125" parent="eieaO2LlE6_dv7Pf06_k-113" style="swimlane;whiteSpace=wrap;html=1;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="590" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-126" parent="eieaO2LlE6_dv7Pf06_k-125" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-127" parent="eieaO2LlE6_dv7Pf06_k-125" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-128" parent="eieaO2LlE6_dv7Pf06_k-125" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-134" edge="1" parent="eieaO2LlE6_dv7Pf06_k-113" source="eieaO2LlE6_dv7Pf06_k-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-130" parent="eieaO2LlE6_dv7Pf06_k-113" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="540" y="334" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-135" parent="eieaO2LlE6_dv7Pf06_k-113" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Listo!&lt;/h1&gt;&lt;div&gt;p ya apunta al siguiente elemento del nodo en el que se encuentra. Pero fijate que, en este caso, seria NULL. Por lo tanto, conectar el nuevo nodo seria tan simple como cambiar ese NULL, por la direccion del nuevo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Entonces, si antes de agregar el nuevo nodo hicieramos *p, nos daria null (Porque estaria apuntando al siguiente nodo, y preguntando por su contenido). Entonces simplemente hay que asignarle a *p la direccion de nuevoNodo.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="360" x="660" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-136" parent="eieaO2LlE6_dv7Pf06_k-1" style="swimlane;whiteSpace=wrap;html=1;" value="Conectado!" vertex="1">
+          <mxGeometry height="610" width="1050" x="20" y="1850" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-137" edge="1" parent="eieaO2LlE6_dv7Pf06_k-136" source="eieaO2LlE6_dv7Pf06_k-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-138" parent="eieaO2LlE6_dv7Pf06_k-136" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-139" parent="eieaO2LlE6_dv7Pf06_k-136" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-140" parent="eieaO2LlE6_dv7Pf06_k-139" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-141" parent="eieaO2LlE6_dv7Pf06_k-139" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-142" parent="eieaO2LlE6_dv7Pf06_k-139" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-143" parent="eieaO2LlE6_dv7Pf06_k-136" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-144" parent="eieaO2LlE6_dv7Pf06_k-143" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-145" parent="eieaO2LlE6_dv7Pf06_k-143" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-146" parent="eieaO2LlE6_dv7Pf06_k-143" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-147" edge="1" parent="eieaO2LlE6_dv7Pf06_k-136" source="eieaO2LlE6_dv7Pf06_k-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-143">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="532.6400000000003" y="174" />
+              <mxPoint x="532.6400000000003" y="287" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-164" edge="1" parent="eieaO2LlE6_dv7Pf06_k-136" source="eieaO2LlE6_dv7Pf06_k-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-146">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-153" parent="eieaO2LlE6_dv7Pf06_k-136" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="625" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-157" parent="eieaO2LlE6_dv7Pf06_k-136" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Ahora si&lt;/h1&gt;&lt;div&gt;p quedo apuntando a la direccion del siguiente nodo, y el siguiente nodo ahora apunta al nuevo.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Aclaracion: Siempre recorda que p nunca sale del Nodo 2. Por eso es tan facil eliminar o agregar cosas. p siempre se para un nodo anterior al que estemos por agregar o eliminar.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="385" x="625" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-160" parent="eieaO2LlE6_dv7Pf06_k-136" style="swimlane;whiteSpace=wrap;html=1;" value="Nuevo nodo" vertex="1">
+          <mxGeometry height="150" width="320" x="192.64000000000033" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-161" parent="eieaO2LlE6_dv7Pf06_k-160" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-162" parent="eieaO2LlE6_dv7Pf06_k-160" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-163" parent="eieaO2LlE6_dv7Pf06_k-160" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-165" edge="1" parent="eieaO2LlE6_dv7Pf06_k-136" source="eieaO2LlE6_dv7Pf06_k-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-160">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="533" y="364" />
+              <mxPoint x="533" y="478" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-166" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="sacarUltimoLista" vertex="1">
+          <mxGeometry height="2430" width="1080" x="6160" y="3100" as="geometry">
+            <mxRectangle height="30" width="130" x="6160" y="3100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-237" parent="eieaO2LlE6_dv7Pf06_k-166" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Buscando el ante-ultimo" vertex="1">
+          <mxGeometry height="610" width="1050" x="15" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-238" edge="1" parent="eieaO2LlE6_dv7Pf06_k-237" source="eieaO2LlE6_dv7Pf06_k-239" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-240">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-239" parent="eieaO2LlE6_dv7Pf06_k-237" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-240" parent="eieaO2LlE6_dv7Pf06_k-237" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-241" parent="eieaO2LlE6_dv7Pf06_k-240" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-242" parent="eieaO2LlE6_dv7Pf06_k-240" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-243" parent="eieaO2LlE6_dv7Pf06_k-240" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-244" parent="eieaO2LlE6_dv7Pf06_k-237" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-245" parent="eieaO2LlE6_dv7Pf06_k-244" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-246" parent="eieaO2LlE6_dv7Pf06_k-244" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-247" parent="eieaO2LlE6_dv7Pf06_k-244" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-248" edge="1" parent="eieaO2LlE6_dv7Pf06_k-237" source="eieaO2LlE6_dv7Pf06_k-243" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-244">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="532.6400000000003" y="174" />
+              <mxPoint x="532.6400000000003" y="287" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-251" parent="eieaO2LlE6_dv7Pf06_k-237" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Y si ahora queres sacar el ultimo?&lt;/h1&gt;&lt;div&gt;Bueno, es muy parecido a poner en el ultimo, solo que cambia unos pocos detalles.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Se mantiene el hecho de que hay que buscar el nodo, cuya puntero a&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;p-&amp;gt;siguiente sea NULL. Por lo tanto, se empieza recorriendo hasta que *p sea NULL, siendo p la direccion del contenido de p-&amp;gt;siguiente del siguiente nodo. Por lo tanto, desde el nodo anterior, p se fija si el siguiente nodo tiene uno mas conectado, o si por el contrario es el ultimo.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="450" x="570" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-252" parent="eieaO2LlE6_dv7Pf06_k-237" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 3" vertex="1">
+          <mxGeometry height="150" width="320" x="192.64000000000033" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-253" parent="eieaO2LlE6_dv7Pf06_k-252" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-254" parent="eieaO2LlE6_dv7Pf06_k-252" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-295" edge="1" parent="eieaO2LlE6_dv7Pf06_k-252" source="eieaO2LlE6_dv7Pf06_k-255" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="372.3599999999997" y="114" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-255" parent="eieaO2LlE6_dv7Pf06_k-252" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-256" edge="1" parent="eieaO2LlE6_dv7Pf06_k-237" source="eieaO2LlE6_dv7Pf06_k-247" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-252">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="533" y="364" />
+              <mxPoint x="533" y="478" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-294" edge="1" parent="eieaO2LlE6_dv7Pf06_k-237" source="eieaO2LlE6_dv7Pf06_k-293" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-239">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-293" parent="eieaO2LlE6_dv7Pf06_k-237" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="10" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-296" parent="eieaO2LlE6_dv7Pf06_k-237" style="rounded=0;whiteSpace=wrap;html=1;" value="NULL" vertex="1">
+          <mxGeometry height="60" width="120" x="565" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-297" parent="eieaO2LlE6_dv7Pf06_k-166" style="swimlane;whiteSpace=wrap;html=1;" value="Encontrando el ante-ultimo" vertex="1">
+          <mxGeometry height="610" width="1050" x="15" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-298" edge="1" parent="eieaO2LlE6_dv7Pf06_k-297" source="eieaO2LlE6_dv7Pf06_k-299" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-300">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-299" parent="eieaO2LlE6_dv7Pf06_k-297" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-300" parent="eieaO2LlE6_dv7Pf06_k-297" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-301" parent="eieaO2LlE6_dv7Pf06_k-300" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-302" parent="eieaO2LlE6_dv7Pf06_k-300" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-303" parent="eieaO2LlE6_dv7Pf06_k-300" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-304" parent="eieaO2LlE6_dv7Pf06_k-297" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-305" parent="eieaO2LlE6_dv7Pf06_k-304" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-306" parent="eieaO2LlE6_dv7Pf06_k-304" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-307" parent="eieaO2LlE6_dv7Pf06_k-304" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-308" edge="1" parent="eieaO2LlE6_dv7Pf06_k-297" source="eieaO2LlE6_dv7Pf06_k-303" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-304">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="532.6400000000003" y="174" />
+              <mxPoint x="532.6400000000003" y="287" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-309" parent="eieaO2LlE6_dv7Pf06_k-297" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Lo encontramos!&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Desde el Nodo 2, p se fijo si el Nodo 3 tenia o no un siguiente. Al no cumplirse esa condicion, el while en el que p avanzaba de p-&amp;gt;siguiente en p-&amp;gt;siguiente, se rompe.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="450" x="565" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-310" parent="eieaO2LlE6_dv7Pf06_k-297" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 3" vertex="1">
+          <mxGeometry height="150" width="320" x="192.64000000000033" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-311" parent="eieaO2LlE6_dv7Pf06_k-310" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-312" parent="eieaO2LlE6_dv7Pf06_k-310" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-313" edge="1" parent="eieaO2LlE6_dv7Pf06_k-310" source="eieaO2LlE6_dv7Pf06_k-314" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="372.3599999999997" y="114" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-314" parent="eieaO2LlE6_dv7Pf06_k-310" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-315" edge="1" parent="eieaO2LlE6_dv7Pf06_k-297" source="eieaO2LlE6_dv7Pf06_k-307" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-310">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="533" y="364" />
+              <mxPoint x="533" y="478" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-320" edge="1" parent="eieaO2LlE6_dv7Pf06_k-297" source="eieaO2LlE6_dv7Pf06_k-317" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-307">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-317" parent="eieaO2LlE6_dv7Pf06_k-297" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="615" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-318" parent="eieaO2LlE6_dv7Pf06_k-297" style="rounded=0;whiteSpace=wrap;html=1;" value="NULL" vertex="1">
+          <mxGeometry height="60" width="120" x="565" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-321" parent="eieaO2LlE6_dv7Pf06_k-166" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Como elimino el ultimo?" vertex="1">
+          <mxGeometry height="610" width="1050" x="15" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-322" edge="1" parent="eieaO2LlE6_dv7Pf06_k-321" source="eieaO2LlE6_dv7Pf06_k-323" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-324">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-323" parent="eieaO2LlE6_dv7Pf06_k-321" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-324" parent="eieaO2LlE6_dv7Pf06_k-321" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-325" parent="eieaO2LlE6_dv7Pf06_k-324" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-326" parent="eieaO2LlE6_dv7Pf06_k-324" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-327" parent="eieaO2LlE6_dv7Pf06_k-324" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-328" parent="eieaO2LlE6_dv7Pf06_k-321" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-329" parent="eieaO2LlE6_dv7Pf06_k-328" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-330" parent="eieaO2LlE6_dv7Pf06_k-328" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-331" parent="eieaO2LlE6_dv7Pf06_k-328" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-332" edge="1" parent="eieaO2LlE6_dv7Pf06_k-321" source="eieaO2LlE6_dv7Pf06_k-327" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-328">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="532.6400000000003" y="174" />
+              <mxPoint x="532.6400000000003" y="287" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-333" parent="eieaO2LlE6_dv7Pf06_k-321" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Encontrada la direccion del ultimo...&lt;/h1&gt;&lt;div&gt;Con eso ya puedo copiar el contenido en algun bloque de memoria y devolverlo. Y despues, hay que eliminar tanto la informacion del nodo, como el nodo mismo! Una vez hecho eso, ya podes &quot;perder&quot; la direccion a ese nodo, haciendo que el contenido de a lo que esta apuntando p en este momento (siguiente) sea == NULL.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="335" x="625" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-334" parent="eieaO2LlE6_dv7Pf06_k-321" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 3" vertex="1">
+          <mxGeometry height="150" width="320" x="192.64000000000033" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-335" parent="eieaO2LlE6_dv7Pf06_k-334" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-336" parent="eieaO2LlE6_dv7Pf06_k-334" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-337" edge="1" parent="eieaO2LlE6_dv7Pf06_k-334" source="eieaO2LlE6_dv7Pf06_k-338" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="372.3599999999997" y="114" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-338" parent="eieaO2LlE6_dv7Pf06_k-334" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-339" edge="1" parent="eieaO2LlE6_dv7Pf06_k-321" source="eieaO2LlE6_dv7Pf06_k-331" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-334">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="533" y="364" />
+              <mxPoint x="533" y="478" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-340" edge="1" parent="eieaO2LlE6_dv7Pf06_k-321" source="eieaO2LlE6_dv7Pf06_k-341" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-331">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-341" parent="eieaO2LlE6_dv7Pf06_k-321" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="615" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-342" parent="eieaO2LlE6_dv7Pf06_k-321" style="rounded=0;whiteSpace=wrap;html=1;" value="NULL" vertex="1">
+          <mxGeometry height="60" width="120" x="565" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-343" parent="eieaO2LlE6_dv7Pf06_k-166" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Todo listo..." vertex="1">
+          <mxGeometry height="510" width="1050" x="15" y="1910" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-344" edge="1" parent="eieaO2LlE6_dv7Pf06_k-343" source="eieaO2LlE6_dv7Pf06_k-345" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-346">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-345" parent="eieaO2LlE6_dv7Pf06_k-343" style="rounded=0;whiteSpace=wrap;html=1;" value="t_lista" vertex="1">
+          <mxGeometry height="60" width="110" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-346" parent="eieaO2LlE6_dv7Pf06_k-343" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 1" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-347" parent="eieaO2LlE6_dv7Pf06_k-346" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-348" parent="eieaO2LlE6_dv7Pf06_k-346" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-349" parent="eieaO2LlE6_dv7Pf06_k-346" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-350" parent="eieaO2LlE6_dv7Pf06_k-343" style="swimlane;whiteSpace=wrap;html=1;" value="Nodo 2" vertex="1">
+          <mxGeometry height="150" width="320" x="192.63999999999942" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-351" parent="eieaO2LlE6_dv7Pf06_k-350" style="rounded=0;whiteSpace=wrap;html=1;" value="Dato" vertex="1">
+          <mxGeometry height="102" width="200" x="10" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-352" parent="eieaO2LlE6_dv7Pf06_k-350" style="rounded=0;whiteSpace=wrap;html=1;" value="tamDato" vertex="1">
+          <mxGeometry height="50" width="100" x="210" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-353" parent="eieaO2LlE6_dv7Pf06_k-350" style="rounded=0;whiteSpace=wrap;html=1;" value="nodo Siguiente" vertex="1">
+          <mxGeometry height="52" width="100" x="210" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-354" edge="1" parent="eieaO2LlE6_dv7Pf06_k-343" source="eieaO2LlE6_dv7Pf06_k-349" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-350">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="532.6400000000003" y="174" />
+              <mxPoint x="532.6400000000003" y="287" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-355" parent="eieaO2LlE6_dv7Pf06_k-343" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Encontrada la direccion del ultimo...&lt;/h1&gt;&lt;div&gt;Con eso ya puedo copiar el contenido en algun bloque de memoria y devolverlo. Y despues, hay que eliminar tanto la informacion del nodo, como el nodo mismo! Una vez hecho eso, ya podes &quot;perder&quot; la direccion a ese nodo, haciendo que el contenido de a lo que esta apuntando p en este momento (siguiente) sea == NULL.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="335" x="625" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-361" edge="1" parent="eieaO2LlE6_dv7Pf06_k-343" source="eieaO2LlE6_dv7Pf06_k-353" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-364">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="533" y="364" />
+              <mxPoint x="533" y="460" />
+            </Array>
+            <mxPoint x="512.6400000000003" y="477.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-362" edge="1" parent="eieaO2LlE6_dv7Pf06_k-343" source="eieaO2LlE6_dv7Pf06_k-363" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="eieaO2LlE6_dv7Pf06_k-353">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-363" parent="eieaO2LlE6_dv7Pf06_k-343" style="rounded=0;whiteSpace=wrap;html=1;" value="p" vertex="1">
+          <mxGeometry height="60" width="110" x="615" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-364" parent="eieaO2LlE6_dv7Pf06_k-343" style="rounded=0;whiteSpace=wrap;html=1;" value="NULL" vertex="1">
+          <mxGeometry height="60" width="120" x="282.64" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-365" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div class=&quot;paragraph normal ng-star-inserted&quot; data-start-index=&quot;0&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;ol class=&quot;ng-star-inserted&quot; style=&quot;margin-block: 0px 0.75rem; padding-inline-start: 1.5rem; color: rgb(199, 199, 199); font-family: &amp;quot;Google Sans Text&amp;quot;; font-size: 14px; text-align: start; white-space: pre-wrap; background-color: rgb(34, 38, 43);&quot;&gt;&lt;li class=&quot;paragraph list-item normal ng-star-inserted&quot; data-start-index=&quot;158&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;b data-start-index=&quot;158&quot; class=&quot;ng-star-inserted&quot;&gt;Preparación del Nodo:&lt;/b&gt;&lt;span data-start-index=&quot;179&quot; class=&quot;ng-star-inserted&quot;&gt; Se reserva memoria dinámica para el nuevo nodo (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;228&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;tNodo&lt;/code&gt;&lt;span data-start-index=&quot;233&quot; class=&quot;ng-star-inserted&quot;&gt;) y para su información. Se copian los datos y se asigna el tamaño (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;301&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;tamInfo&lt;/code&gt;&lt;span data-start-index=&quot;308&quot; class=&quot;ng-star-inserted&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span data-start-index=&quot;309&quot; class=&quot;ng-star-inserted&quot;&gt;.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;paragraph list-item normal ng-star-inserted&quot; data-start-index=&quot;310&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;b data-start-index=&quot;310&quot; class=&quot;ng-star-inserted&quot;&gt;Búsqueda con el &quot;Dedo&quot;:&lt;/b&gt;&lt;span data-start-index=&quot;333&quot; class=&quot;ng-star-inserted&quot;&gt; Se utiliza un puntero doble (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;363&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;lista&lt;/code&gt;&lt;span data-start-index=&quot;368&quot; class=&quot;ng-star-inserted&quot;&gt;) para recorrer las direcciones de los enlaces. El bucle avanza mientras exista un nodo adelante (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;466&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;*lista != NULL&lt;/code&gt;&lt;span data-start-index=&quot;480&quot; class=&quot;ng-star-inserted&quot;&gt;) y su contenido sea menor al dato nuevo según la función de comparación (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;554&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;cmp &amp;lt; 0&lt;/code&gt;&lt;span data-start-index=&quot;561&quot; class=&quot;ng-star-inserted&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span data-start-index=&quot;562&quot; class=&quot;ng-star-inserted&quot;&gt;.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;paragraph list-item normal ng-star-inserted&quot; data-start-index=&quot;563&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;b data-start-index=&quot;563&quot; class=&quot;ng-star-inserted&quot;&gt;Frenado Estratégico:&lt;/b&gt;&lt;span data-start-index=&quot;583&quot; class=&quot;ng-star-inserted&quot;&gt; El &quot;dedo&quot; se detiene exactamente en la casilla del enganche (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;645&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;sig&lt;/code&gt;&lt;span data-start-index=&quot;648&quot; class=&quot;ng-star-inserted&quot;&gt;) del nodo anterior al lugar de inserción. Si la inserción es al principio, se queda apuntando al ancla original&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span data-start-index=&quot;760&quot; class=&quot;ng-star-inserted&quot;&gt;.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;paragraph list-item normal ng-star-inserted&quot; data-start-index=&quot;761&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;b data-start-index=&quot;761&quot; class=&quot;ng-star-inserted&quot;&gt;La Conexión de Puente:&lt;/b&gt;&lt;ul class=&quot;ng-star-inserted&quot;&gt;&lt;li class=&quot;paragraph list-item normal ng-star-inserted&quot; data-start-index=&quot;783&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;b data-start-index=&quot;783&quot; class=&quot;ng-star-inserted&quot;&gt;Enganche hacia adelante:&lt;/b&gt;&lt;span data-start-index=&quot;807&quot; class=&quot;ng-star-inserted&quot;&gt; El nuevo nodo conecta su campo &lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;839&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;sig&lt;/code&gt;&lt;span data-start-index=&quot;842&quot; class=&quot;ng-star-inserted&quot;&gt; a lo que apunta actualmente el dedo (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;880&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;*lista&lt;/code&gt;&lt;span data-start-index=&quot;886&quot; class=&quot;ng-star-inserted&quot;&gt;). Esto lo vincula con el resto de la cadena (o con &lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;938&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;NULL&lt;/code&gt;&lt;span data-start-index=&quot;942&quot; class=&quot;ng-star-inserted&quot;&gt; si llegó al final)&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span data-start-index=&quot;961&quot; class=&quot;ng-star-inserted&quot;&gt;.&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;paragraph list-item normal ng-star-inserted&quot; data-start-index=&quot;962&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;b data-start-index=&quot;962&quot; class=&quot;ng-star-inserted&quot;&gt;Enganche desde atrás:&lt;/b&gt;&lt;span data-start-index=&quot;983&quot; class=&quot;ng-star-inserted&quot;&gt; Se actualiza el contenido de la casilla que sostiene el dedo (&lt;/span&gt;&lt;code class=&quot;code ng-star-inserted&quot; data-start-index=&quot;1046&quot; style=&quot;font-family: &amp;quot;Google Sans Code&amp;quot;; font-size: 0.875rem; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(62, 74, 89); padding: 0.25rem;&quot;&gt;*lista&lt;/code&gt;&lt;span data-start-index=&quot;1052&quot; class=&quot;ng-star-inserted&quot;&gt;) para que ahora apunte al nuevo nodo. Esto integra el nuevo vagón a la vía de forma definitiva&lt;/span&gt;&lt;span class=&quot;ng-star-inserted&quot;&gt;&lt;button class=&quot;xap-inline-dialog citation-marker ng-star-inserted&quot; aria-haspopup=&quot;dialog&quot; aria-describedby=&quot;cdk-describedby-message-ng-1-13&quot; data-disabled=&quot;false&quot; style=&quot;font: 500 11.008px / 16px &amp;quot;Google Sans Text&amp;quot;; letter-spacing: 0.096px; display: inline-flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; vertical-align: middle; border-width: 0px; border-style: none; border-radius: 50%; padding: 0px; height: 1.375rem; width: 1.375rem; margin-inline-start: 0.25rem; cursor: pointer; background-color: rgb(26, 29, 34); color: rgb(171, 171, 171); transition: opacity 0.2s linear; opacity: 1; user-select: none;&quot;&gt;&lt;/button&gt;&lt;/span&gt;&lt;span data-start-index=&quot;1147&quot; class=&quot;ng-star-inserted&quot;&gt;.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;div class=&quot;paragraph normal ng-star-inserted&quot; data-start-index=&quot;1148&quot; style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 16px; line-height: 1.5rem; font-family: &amp;quot;Google Sans Text&amp;quot;; margin-block-end: 8px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="470" width="470" x="4930" y="2530" as="geometry" />
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-366" edge="1" parent="1" source="eieaO2LlE6_dv7Pf06_k-1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="eieaO2LlE6_dv7Pf06_k-365" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5270" y="3170" as="sourcePoint" />
+            <mxPoint x="5320" y="3120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eieaO2LlE6_dv7Pf06_k-367" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Para el caso de ponerEnOrden" vertex="1">
+          <mxGeometry height="68" width="140" x="5470" y="3002" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

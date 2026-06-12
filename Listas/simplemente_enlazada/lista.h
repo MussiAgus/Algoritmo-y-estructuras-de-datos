@@ -7,6 +7,7 @@
 #define SIN_MEM 1
 #define CLA_DUP 2
 #define TODO_BIEN 3
+#define VACIA 4
 
 #define MIN(a,b) ( (a)<=(b)? (a): (b))
 
