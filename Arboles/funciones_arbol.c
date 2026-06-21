@@ -40,19 +40,39 @@ int insertarNodoArbol(t_arbol *p, void *dato, size_t tamDato, int (*cmp)(void*, 
     return TODO_BIEN;
 }
 
-// t_arbol *p recibe el resultado de t_nodo **BuscarNodoDevolverDireccion entonces esa ya es la direccion del nodo a eliminar.
+// t_nodo ** recibe el resultado de t_nodo **BuscarNodoDevolverDireccion entonces esa ya es la direccion del nodo a eliminar.
 int eliminarNodoArbol(t_arbol *p, void *dato, size_t tamDato, int (*cmp)(void*, void*)){
 
     if(!*p)
         return 0;
 
-    t_nodo **reemplazado, *eliminado;
+    t_nodo **formatear, **reemplazante;
+    t_nodo *eliminar;
 
-    reemplazado = alturaArbolBin(&(*p)->izq)>alturaArbolBin(&(*p)->der)? retornarMayorNodo(&(*p)->izq):retornarMenorNodo(&(*p)->der);
+    formatear = buscarNodoDevolverDireccion(p,dato,cmp);
 
+    if(!formatear)
+        return 0;
 
+    if( !(*formatear)->izq && !(*formatear)->der){
+        free((*formatear)->info);
+        free(*formatear);
+        *formatear=NULL;
+        return TODO_BIEN;
+    }
 
+    reemplazante = alturaArbol(&(*formatear)->izq)>alturaArbol(&(*formatear)->der)? retornarMayorNodo(&(*formatear)->izq):retornarMenorNodo(&(*formatear)->der);
+    eliminar = *reemplazante;
 
+    free((*formatear)->info);
+
+    (*formatear)->info = eliminar->info;
+    (*formatear)->tamInfo = eliminar->tamInfo;
+
+    *reemplazante = eliminar->izq ? eliminar->izq : eliminar->der;
+
+    free(eliminar);
+    return TODO_BIEN;
 }
 
 int buscarNodoDevolverContenido(t_arbol *p, void *dato, size_t tamDato, int (*cmp)(void*,void*)){
@@ -107,9 +127,24 @@ t_nodo **retornarMayorNodo(t_arbol *p){
     return retornarMayorNodo(&(*p)->der);
 }
 
-int obtenerAlturaArbol(t_arbol *p){
+int alturaArbol(t_arbol *p){
 
     if(!*p)
         return 0;
 
+    int alturaIzquierda = alturaArbol(&(*p)->izq);
+    int alturaDerecha = alturaArbol(&(*p)->der);
+
+    return ( alturaIzquierda > alturaDerecha? alturaIzquierda : alturaDerecha) + 1;
 }
+
+int contarNodosTotalesArbol(t_arbol *p){
+
+    if(!*p)
+        return 0;
+
+    return obtenerAlturaArbol(&(*p)->izq) + 1 + obtenerAlturaArbol(&(*p)->der);
+}
+
+
+
